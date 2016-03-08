@@ -10,6 +10,7 @@ linux:
 	cp dist/hosts build/Linux
 	cp dist/logins build/Linux
 	cp dist/passwords build/Linux
+	cp hostgen.py build/Linux
 
 windows:
 	CGO_CFLAGS="-I${WDIR}/include" CGO_LDFLAGS="-L${WDIR}/lib -Wl,--large-address-aware,--enable-stdcall-fixup,-rpath=${WDIR}/lib -lhcnetsdk" GOOS=windows CC=i686-w64-mingw32-gcc CXX=i686-w64-mingw32-g++ go build -o build/Windows/hikka.exe src/hikka.go
