@@ -36,7 +36,7 @@ You can define some options:
 
 __Please note that it is hardcoded to read IPs from file called “hosts”!__
 
-A typical cammand is:
+A typical command is:
 
     hikka -threads 200 -check -shoots pics/
 
