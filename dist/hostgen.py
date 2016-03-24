@@ -1,9 +1,8 @@
 #/usr/bin/env python
 
-import sys
+import sys, socket, struct
 
 def ips(start, end):
-    import socket, struct
     start = struct.unpack(">I", socket.inet_aton(start))[0]
     end = struct.unpack(">I", socket.inet_aton(end))[0]
     return [socket.inet_ntoa(struct.pack(">I", i)) for i in range(start, end)]
